@@ -1,0 +1,11 @@
+<canvas #canvas [width]="containerWidth" [height]="containerHeight" [quad]="quad" class="map" appCanvasHandler
+  [color]="color" [drawFn]="draw" [isEditing]="editMode" (changes)="onCanvasChanges($event)"
+  (click)="canvasClick($event)" #handler="canvasHandler"></canvas>
+
+<!-- <div class="minimap">
+  <canvas #minimap width="200px" height="200px"></canvas>
+</div> -->
+
+<div class="controls">
+  <button (click)="editMode = !editMode">{{editMode ? 'Salvar' : 'Editar'}}</button>
+</div>
